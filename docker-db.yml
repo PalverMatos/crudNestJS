@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: databaseMysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: desafio-db
+      MYSQL_ROOT_PASSWORD: teste
+    ports:
+      - '3306:3306'
+    volumes:
+      - /home/user/volume-docker/db:/var/lib/mysql
+
+volumes:
+  db:
